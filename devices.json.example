@@ -1,0 +1,18 @@
+{
+  "r1": {
+    "dev_fqdn": "r1.example.com",
+    "dev_type": "vyatta_vyos"
+  },
+  "r2": {
+    "dev_fqdn": "r2.example.com",
+    "dev_type": "juniper_junos"
+  },
+  "s1": {
+    "dev_fqdn": "s1.example.com",
+    "dev_type": "cisco_ios"
+  },
+  "s2": {
+    "dev_fqdn": "s2.example.com",
+    "dev_type": "cisco_ios"
+  }
+}

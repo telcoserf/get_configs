@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+
+  get_configs:
+    image: 127.0.0.1:5000/get_configs
+    build: .
+    volumes:
+      - .:/usr/src/app
+    dns:
+      - 192.168.20.6
+    environment:
+      - PYTHONUNBUFFERED=1
+
