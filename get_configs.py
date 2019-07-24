@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 
+
 ##### get_configs #####
 
 # This script will connect to the devices from devices.json using the
@@ -8,17 +9,16 @@
 # a file in the configs directory.
 
 # Written by Zach Wendell, 201902
-# Last Updated: 20190212T053400Z
+# Last Updated: 20190724T205931Z
+
 
 
 # IMPORT LIBRARIES
 import netmiko
 from datetime import datetime
 import json
+import time
 
-
-# GET CURRENT TIMESTAMP (UTC date/time in ISO8601 format)
-now8601 = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
 
 
 # DEFINE CREDENTIALS & DEVICES
@@ -156,8 +156,14 @@ def get_configs():
 
 
 
-# Run the get_configs function
-get_configs()
+# While loop to run forever
+while True:
+  # GET CURRENT TIMESTAMP (UTC date/time in ISO8601 format)
+  now8601 = datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
+  # Run the 'get_configs' function above
+  get_configs()
+  # Sleep for 12 hours, then loop again!
+  time.sleep(43200)
 
 
 
